@@ -56,6 +56,22 @@ OWASP guide focues on: </br>
 2. What are mechanics/techniques of reviewing code for security vulnerabilities </br>
 
 **❎What does not focus on is giving you guide on how to perform source code review**
+## Methodology
+Code review is a systematic examination of computer source code and reviews are done in many forms and can be accomplished in various phases/stages of each organization S-SDLC. </br>
+The following methodology would cover: </br>
+1. Informal walkthoughs
+2. Formal inspections
+3. Tool assisted code reviews </br>
+
+### Factors To Consider When Developing a Code Review Process
+Why considering multiple factors because each secure code review is unique to its context. </br>
+1. Consider technical/business related factors (deadlines, resources) as these factor decide the most effective way to execute code review.
+2. Risks -- we cannot secure applications 100%, therefore, we need to prioritize components and features that must be securely reviewed.
+3. Pruposes & contexts -- depending on the purpose and context of the application, the grade of security will vary (payment web applications vs promotional web application)
+    1. **Stay reminded of what the business wants to protect**
+4. Lines of code -- is an indicator of the amount of work (lines of code to be reviewed). The more lines of code a program contains, the greater the chances that errors are present in the code
+5. Programming languages -- the kind of language will determine the type of expected bugs which would help in secure code reviews (e.g., typed safe languages such as Java and C# are not vulnerable to bugs such as buffer overflows, etc.)
+6. Resources, Time & Deadlines -- proper resources should be allocated to avoid the risk(analytical skills, efficient time, etc)
 
 ## What a Reviewer Should Look For When Reviewing Techincal Code
 
