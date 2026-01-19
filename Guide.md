@@ -151,6 +151,18 @@ The checklist should cover the most critical security controls and vulnerability
 |Elaborate reporting format|False positives -- code analyzers identify lots of not real issues so manual intervention is required|
 
 static code analyzers fill the gap of not being able to follow data flow/execution.
+#### Choosing A Static Analysis Tool
+Choosing a static analysis tool can be decided based on the following questions: </br>
+1. Does the tool support the programming language?
+2. Is there a prefrence between commercial or free tools?
+3. What type of analysis being carried out? Is it security? Quality? Static or Dynamic analysis? </br>
+Next step requires some work is done because it is quiet objective: test a few tools to see if team is satisfied with it? user experience, reporting, level of false positives, etc. </br>
+
+### Threat Modeling
+Threat modeling --> is an in-depth approach for analyzing the security of the application to provide a context and risk analysis of the app. </br>
+Threat modeling is benefical when a source code analysis is performed on an existing application, because: </br>
+1. **The results of it help in reducing the complexity of the source code analysis by promoting a risk based approach (instead of reviewing all source code with equal focus, we can prioritize the security code review of components whos threat modeling has randked with high risk threats.** </br>
+
 ## What a Reviewer Should Look For When Reviewing Techincal Code
 
 # References 
