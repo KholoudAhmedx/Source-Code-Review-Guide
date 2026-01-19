@@ -73,6 +73,38 @@ Why considering multiple factors because each secure code review is unique to it
 5. Programming languages -- the kind of language will determine the type of expected bugs which would help in secure code reviews (e.g., typed safe languages such as Java and C# are not vulnerable to bugs such as buffer overflows, etc.)
 6. Resources, Time & Deadlines -- proper resources should be allocated to avoid the risk(analytical skills, efficient time, etc)
 
+### When to Code Review
+3 possible phases in SDLC, where code can be reviewed:
+1. Pre-commit; before submitting the code to the repo
+    1. Disadvantage: slow down checking code in
+    2. Advatage: code sumbitted is at the quality that has been stipulated
+1.  Post-commit; after sumbitting code
+    1. Disadvantage: lesser quality code
+    2. Advantage: Dev team won't wait on a gate to pass before they check-in their code
+3. When code audits are done
+    4. Review code at intervals (i.e. yearly) or when vulenrable code is found
+    5. (Review the whole code not only a single submission) </br>
+### Assess Risk To Code Modules
+To define the risk of a module or piece of code should be based on **solid cost benefit analysis**. </br>
+**3 main techniques to establish Risk**:
+1. Quantitative -> in terms of money (potenital loss associated with the code)
+2. Qualitative -> in terms of quality of code (what level of loss is associated with the modules
+3. Delphi -> independantly interview people on losses and level of compormises and let them know the feedback is anon to give honest feedback
+
+**Criteria for establishing the risk profile of a code module:**
+1. Ease of expose -- is the code directly exposed to the internet?
+2. Value of loss -- how much could be lost if the module has a vulnerability?
+3. Regulatory controls -- if a piece of code implements busniess logic that is associated with a standard that must be complied with should be defined as high risk as there might be penalities for non-conformity </br>
+
+**Options for handling risks in a code review** </br>
+If a code changes introduces risk to the code, there are 3 options available: </br>
+1. Accept
+2. Reduce
+3. Avoid </br>
+
+
+### Who Should Perform Secure Code Reviews
+
 ## What a Reviewer Should Look For When Reviewing Techincal Code
 
 # References 
