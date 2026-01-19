@@ -101,10 +101,56 @@ If a code changes introduces risk to the code, there are 3 options available: </
 1. Accept
 2. Reduce
 3. Avoid </br>
+In order to perform source code review, the reviewer should understand the business purpose of the app and the critical business impacts and identify the attack surface. </br>
 
+### Basic Items The Reviewer Should Understand About Application Subjected To a Secure Code Review
+(Regarding small organizations) </br>
+1. **Application features and business rules**
+    1. What are concequences of this system failing?
+    2. Shall the enterprise be affected in a great way?
+2. **Context** -- context is the "Holy Grail" of secure code insepection and risk assessment
+3. **Sensitive Data** -- make note of data entities like account numebrs, passwords, etc. to help you in determining the impact if any data loss happend
+4. **User roles & access rights**
+    1. Attacks targeted for apps that is designed for internal users is different than attacks targeted for apps that is designed for external users (external users can access it) 
+5. **Application Type**
+    6. Defining the application type helps look for sepcific security flaws regarding that type (web service, browser bases app, mobile app, etc.)
+6. **Code** -- langauges used and the issues and features of these langauges from a security prespective
+7. **Design**
+8. **Company standards and guidelines**
+   1. If the company has secure code guideliness document, the reviewer should adhere to it. </br>
 
-### Who Should Perform Secure Code Reviews
+### Code Review Discovery 
+1. To gather information about the code read design documents, business requirements, functioanl specifications, etc. </br>
+2. Understand the desing
+3. Analyze threats to the design </br>
+### Code Review Checklist
 
+The checklist should cover the most critical security controls and vulnerability areas such as:
+
+- [ ]  Data Validation
+- [ ]  Authentication
+- [ ]  Authorization
+- [ ]  Session Management
+- [ ]  Cryptography
+- [ ]  Error Handling
+- [ ]  Logging
+- [ ]  Security Configurations
+- [ ]  Network Architecture
+### Static Code Analysis
+
+**Automated analysis can be carried on the application through either of the two options:**
+
+1. Static code scanner scripts based on pattern search (in house and opensource)
+2. Static code analyzers (commercial and open source)
+
+| Advatages of source code scanners | Disadvantages of code scanners|
+|----------------------------|-------------------------------|
+|Reduction in minmal effors; Type of vulnerabilities to be scanned remained common across all applications|Business logic flaws remain untouched|
+|Find all instances of the vulenrabilities ; Scanners are effective in this|Limited scope -- scanners are desgined for specific frameworks or languages and they search for certain patterns if not found they cannot identify it|
+|Source to sink analysis; Help you better understand data flow|Desgin flaws -- since desgin flaws are not specific to code structure, code analyzers fail to identify it by looking at the code|
+|Elaborate reporting format|False positives -- code analyzers identify lots of not real issues so manual intervention is required|
+
+static code analyzers fill the gap of not being able to follow data flow/execution.
 ## What a Reviewer Should Look For When Reviewing Techincal Code
 
 # References 
