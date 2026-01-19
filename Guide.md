@@ -123,6 +123,9 @@ In order to perform source code review, the reviewer should understand the busin
 1. To gather information about the code read design documents, business requirements, functioanl specifications, etc. </br>
 2. Understand the desing
 3. Analyze threats to the design </br>
+### Design Questions To Ask During Secure Code Review 
+<img width="1220" height="577" alt="image" src="https://github.com/user-attachments/assets/a2e4da12-629a-41d8-b4dd-9d941a2f85e1" />
+
 ### Code Review Checklist
 
 The checklist should cover the most critical security controls and vulnerability areas such as:
@@ -162,7 +165,24 @@ Next step requires some work is done because it is quiet objective: test a few t
 Threat modeling --> is an in-depth approach for analyzing the security of the application to provide a context and risk analysis of the app. </br>
 Threat modeling is benefical when a source code analysis is performed on an existing application, because: </br>
 1. **The results of it help in reducing the complexity of the source code analysis by promoting a risk based approach (instead of reviewing all source code with equal focus, we can prioritize the security code review of components whos threat modeling has randked with high risk threats.** </br>
-
+**Process of threat modeling:**
+1. Decompse the application --> gain understanding of the app and how it interacts with external entities.
+    1. Important entities to to consider?
+        1. Assets
+        2. Entry points
+        3. External dependencies
+        4. Determine the attack surface          
+2. Determine and rank threats
+    1. Use threat cateogry models such as STRIDE (attacker prespective) or Application Security Frame (ASF)(defensive prespective)
+3. Determine countermeasures and mitigations
+To perfrom secure code review: 
+1. Perform analysis of the attack surface by identifying:
+    1. All inputs to the code
+    2. Trust levels
+    3. Data flow analysis
+    4. All transactions within the application
+   
+3. 
 ## What a Reviewer Should Look For When Reviewing Techincal Code
 
 # References 
